@@ -1,4 +1,4 @@
-# Proyecto Java colaborativo
+# Proyecto Java Grupal G2
 
 Este repositorio contiene casos prácticos desarrollados en Java, documentados y estructurados por el equipo.
 
