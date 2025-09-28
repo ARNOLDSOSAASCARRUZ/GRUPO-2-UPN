@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.RegistroController"
+      spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="🧑 Registro de Usuarios"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10">
+        <Label text="Nombre:" />
+        <TextField fx:id="txtNombre" prefWidth="200" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="DNI:" />
+        <TextField fx:id="txtDni" prefWidth="200" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Dirección:" />
+        <TextField fx:id="txtDireccion" prefWidth="200" />
+    </HBox>
+
+    <Button text="Registrar usuario" onAction="#registrarUsuario"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+
+    <Label fx:id="lblMensaje" style="-fx-text-fill: green;" />
+
+</VBox>
