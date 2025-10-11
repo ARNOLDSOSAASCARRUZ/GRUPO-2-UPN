@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.EditarUsuarioView">
+
+    <top>
+        <Label text="✏️ Editar Usuario"
+               styleClass="titulo-principal"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" styleClass="formulario-edicion">
+            <!-- ✅ Padding corregido usando objeto Insets -->
+            <padding>
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+            </padding>
+
+            <TextField fx:id="txtNombre" promptText="Nombre completo" prefWidth="300"/>
+            <TextField fx:id="txtDni" promptText="DNI (8 dígitos)" prefWidth="300"/>
+            <TextField fx:id="txtDireccion" promptText="Dirección" prefWidth="300"/>
+            <TextField fx:id="txtPuntos" promptText="Puntos acumulados" prefWidth="300"/>
+
+            <Label fx:id="lblEstado" text="" styleClass="label-estado"/>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnGuardar" text="💾 Guardar Cambios" onAction="#guardarCambios"/>
+                <Button fx:id="btnCancelar" text="❌ Cancelar" onAction="#cerrarVentana"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
