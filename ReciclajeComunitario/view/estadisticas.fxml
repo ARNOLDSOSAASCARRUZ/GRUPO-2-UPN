@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.EstadisticasController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="📊 Estadísticas Comunitarias" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="tablaEstadisticas" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="colUsuario" text="Usuario" prefWidth="200" />
+            <TableColumn fx:id="colPuntos" text="Puntos" prefWidth="200" />
+        </columns>
+    </TableView>
+
+    <BarChart fx:id="graficoMateriales" title="Kilos reciclados por tipo"
+              prefHeight="300" prefWidth="500">
+        <xAxis>
+            <CategoryAxis label="Tipo de Material" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Peso (kg)" />
+        </yAxis>
+    </BarChart>
+
+</VBox>

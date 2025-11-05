@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ReporteController"
+      spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="📤 Exportación de Reportes"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TextArea fx:id="areaVistaPrevia"
+              prefWidth="500" prefHeight="300"
+              editable="false"
+              wrapText="true"
+              style="-fx-font-family: 'Consolas'; -fx-font-size: 12px;" />
+
+    <Button text="Exportar a CSV" onAction="#exportarReporte"
+            style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+
+    <Label fx:id="lblEstado"
+           style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: green;" />
+
+</VBox>
